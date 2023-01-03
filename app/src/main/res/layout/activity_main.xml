@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/textView_YemekSecim"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D6CDCD"
+    android:textAlignment="center"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="135dp"
+        android:background="#090909"
+        android:text="Yemek Seçimi"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView_BaglantiSecim"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_YemekSecimi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"></LinearLayout>
+
+    <CheckBox
+        android:id="@+id/checkBox_Kahvalti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="64dp"
+        android:text="CheckBox"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout_Baglanti"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBox2_Ogle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="1dp"
+        android:text="CheckBox"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout_Baglanti"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox3_Aksam" />
+
+    <CheckBox
+        android:id="@+id/checkBox3_Aksam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="63dp"
+        android:layout_marginBottom="1dp"
+        android:text="CheckBox"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout_Baglanti"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout_Baglanti" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_Baglanti"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/checkBox_Kahvalti"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox_Kahvalti"></LinearLayout>
+
+    <TextView
+        android:id="@+id/textView_BaglantiSecim"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="37dp"
+        android:background="#090909"
+        android:text="Bağlantı Seçimi"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/switch_Wifi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Switch
+        android:id="@+id/switch_Bluetooth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="AirDrop Bağlantısı"
+        android:textColor="#850408"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_Aridrop" />
+
+    <Switch
+        android:id="@+id/switch_Wifi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Wifi Bağlantısı"
+        android:textColor="#850408"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/switch_Aridrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_BaglantiSecim" />
+
+    <Switch
+        android:id="@+id/switch_Aridrop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Bluetooth Bağlantısı"
+        android:textColor="#850408"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/switch_Bluetooth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_Wifi" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="316dp"></LinearLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_GununMenusu"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="322dp" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="381dp">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_Pazartesi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pazartesi" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_Sali"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salı" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_Carsamba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Çarşamba" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:text="Onayla"
+        app:icon="@android:drawable/checkbox_on_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
